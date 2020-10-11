@@ -32,5 +32,9 @@ delivers components that enable engineers to develop applications on Texas Instr
 * * *
 
 ## MSP432 Technical Reference Material
+The latest versions of the following documents can be accesed from the TI's website.
+- [MSP432P401R LaunchPad Development Kit](slau597f.pdf)
+- [MSP432P401R Datasheet]()
+- [MSP432P4xx Technical Reference Manual](slau356i.pdf)
 
 
