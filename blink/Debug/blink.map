@@ -1,0 +1,378 @@
+Archive member included to satisfy reference by file (symbol)
+
+/Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+                              /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (exit)
+/Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                              /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+/Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+                              /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (__libc_init_array)
+/Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+                              /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (memset)
+/Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+                              /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o) (_exit)
+
+Discarded input sections
+
+ .text.SystemCoreClockUpdate
+                0x0000000000000000      0x308 ./system_msp432p401r.o
+ .eh_frame      0x0000000000000000        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MAIN_FLASH       0x0000000000000000 0x0000000000040000 xr
+INFO_FLASH       0x0000000000200000 0x0000000000004000 xr
+SRAM_CODE        0x0000000001000000 0x0000000000010000 xrw
+SRAM_DATA        0x0000000020000000 0x0000000000010000 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+LOAD ./main.o
+LOAD ./system_msp432p401r.o
+LOAD ./gcc/startup_msp432p401r_gcc.o
+                0x0000000000000000                PROVIDE (_intvecs_base_address = DEFINED (_intvecs_base_address)?_intvecs_base_address:0x0)
+
+.intvecs        0x0000000000000000       0xe4
+ *(.intvecs)
+ .intvecs       0x0000000000000000       0xe4 ./gcc/startup_msp432p401r_gcc.o
+                0x0000000000000000                interruptVectors
+                0x0000000000200000                PROVIDE (_mailbox_base_address = 0x200000)
+
+.flashMailbox
+ *(.flashMailbox)
+                0x0000000000201000                PROVIDE (_tlv_base_address = 0x201000)
+
+.tlvTable
+ *(.tlvTable)
+                0x0000000000202000                PROVIDE (_bsl_base_address = 0x202000)
+
+.bslArea
+ *(.bslArea)
+                0x0000000020000000                PROVIDE (_vtable_base_address = DEFINED (_vtable_base_address)?_vtable_base_address:0x20000000)
+
+.vtable
+ *(.vtable)
+
+.text           0x00000000000000e4      0x270
+ CREATE_OBJECT_SYMBOLS
+ *(.text)
+ .text          0x00000000000000e4        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+ .text          0x00000000000000e4       0x40 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .text          0x0000000000000124       0x74 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+                0x0000000000000124                _mainCRTStartup
+                0x0000000000000124                _start
+ .text          0x0000000000000198        0x0 ./main.o
+ .text          0x0000000000000198        0x0 ./system_msp432p401r.o
+ .text          0x0000000000000198        0x0 ./gcc/startup_msp432p401r_gcc.o
+ .text          0x0000000000000198        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+ .text          0x0000000000000198        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000198        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+ .text          0x0000000000000198        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000198        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+ .text          0x0000000000000198        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .text          0x0000000000000198        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+ *(.text.*)
+ .text.main     0x0000000000000198       0x4c ./main.o
+                0x0000000000000198                main
+ .text.SystemInit
+                0x00000000000001e4       0x80 ./system_msp432p401r.o
+                0x00000000000001e4                SystemInit
+ .text.Reset_Handler
+                0x0000000000000264       0x44 ./gcc/startup_msp432p401r_gcc.o
+                0x0000000000000264                Reset_Handler
+ .text.Default_Handler
+                0x00000000000002a8        0x6 ./gcc/startup_msp432p401r_gcc.o
+                0x00000000000002a8                T32_INT2_IRQHandler
+                0x00000000000002a8                DebugMon_Handler
+                0x00000000000002a8                AES256_IRQHandler
+                0x00000000000002a8                HardFault_Handler
+                0x00000000000002a8                SysTick_Handler
+                0x00000000000002a8                PendSV_Handler
+                0x00000000000002a8                NMI_Handler
+                0x00000000000002a8                RTC_C_IRQHandler
+                0x00000000000002a8                PORT1_IRQHandler
+                0x00000000000002a8                FPU_IRQHandler
+                0x00000000000002a8                PORT2_IRQHandler
+                0x00000000000002a8                TA3_0_IRQHandler
+                0x00000000000002a8                UsageFault_Handler
+                0x00000000000002a8                DMA_INT3_IRQHandler
+                0x00000000000002a8                TA2_0_IRQHandler
+                0x00000000000002a8                DMA_INT1_IRQHandler
+                0x00000000000002a8                WDT_A_IRQHandler
+                0x00000000000002a8                TA2_N_IRQHandler
+                0x00000000000002a8                TA1_0_IRQHandler
+                0x00000000000002a8                PSS_IRQHandler
+                0x00000000000002a8                DMA_INT2_IRQHandler
+                0x00000000000002a8                EUSCIA3_IRQHandler
+                0x00000000000002a8                DMA_INT0_IRQHandler
+                0x00000000000002a8                PORT4_IRQHandler
+                0x00000000000002a8                PORT5_IRQHandler
+                0x00000000000002a8                EUSCIB0_IRQHandler
+                0x00000000000002a8                Default_Handler
+                0x00000000000002a8                T32_INTC_IRQHandler
+                0x00000000000002a8                TA3_N_IRQHandler
+                0x00000000000002a8                TA0_0_IRQHandler
+                0x00000000000002a8                EUSCIA2_IRQHandler
+                0x00000000000002a8                PORT6_IRQHandler
+                0x00000000000002a8                PORT3_IRQHandler
+                0x00000000000002a8                MemManage_Handler
+                0x00000000000002a8                SVC_Handler
+                0x00000000000002a8                TA1_N_IRQHandler
+                0x00000000000002a8                EUSCIA1_IRQHandler
+                0x00000000000002a8                COMP_E1_IRQHandler
+                0x00000000000002a8                EUSCIB2_IRQHandler
+                0x00000000000002a8                FLCTL_IRQHandler
+                0x00000000000002a8                EUSCIB3_IRQHandler
+                0x00000000000002a8                T32_INT1_IRQHandler
+                0x00000000000002a8                DMA_ERR_IRQHandler
+                0x00000000000002a8                ADC14_IRQHandler
+                0x00000000000002a8                EUSCIA0_IRQHandler
+                0x00000000000002a8                BusFault_Handler
+                0x00000000000002a8                PCM_IRQHandler
+                0x00000000000002a8                TA0_N_IRQHandler
+                0x00000000000002a8                COMP_E0_IRQHandler
+                0x00000000000002a8                EUSCIB1_IRQHandler
+                0x00000000000002a8                CS_IRQHandler
+ *fill*         0x00000000000002ae        0x2 
+ .text.exit     0x00000000000002b0       0x28 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+                0x00000000000002b0                exit
+ .text.__libc_init_array
+                0x00000000000002d8       0x48 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+                0x00000000000002d8                __libc_init_array
+ .text.memset   0x0000000000000320       0x10 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+                0x0000000000000320                memset
+ .text._exit    0x0000000000000330        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+                0x0000000000000330                _exit
+                0x0000000000000334                . = ALIGN (0x4)
+ *(.ctors)
+                0x0000000000000334                . = ALIGN (0x4)
+ *(.dtors)
+                0x0000000000000334                . = ALIGN (0x4)
+                0x0000000000000334                __init_array_start = .
+ *(.init_array*)
+ .init_array    0x0000000000000334        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000000000338                __init_array_end = .
+ *(.init)
+ .init          0x0000000000000338        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000000000338                _init
+ .init          0x000000000000033c        0x8 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+ *(.fini*)
+ .fini          0x0000000000000344        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000000000344                _fini
+ .fini_array    0x0000000000000348        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini          0x000000000000034c        0x8 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+
+.glue_7         0x0000000000000354        0x0
+ .glue_7        0x0000000000000354        0x0 linker stubs
+
+.glue_7t        0x0000000000000354        0x0
+ .glue_7t       0x0000000000000354        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000000354        0x0
+ .vfp11_veneer  0x0000000000000354        0x0 linker stubs
+
+.v4_bx          0x0000000000000354        0x0
+ .v4_bx         0x0000000000000354        0x0 linker stubs
+
+.iplt           0x0000000000000354        0x0
+ .iplt          0x0000000000000354        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.rodata         0x0000000000000354        0x4
+ *(.rodata)
+ *(.rodata.*)
+ .rodata._global_impure_ptr
+                0x0000000000000354        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000000000354                _global_impure_ptr
+
+.eh_frame       0x0000000000000358        0x0
+ .eh_frame      0x0000000000000358        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.ARM.exidx      0x0000000000000358        0x8
+                0x0000000000000358                __exidx_start = .
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0000000000000358        0x8 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+                0x0000000000000360                __exidx_end = .
+
+.ARM.extab      0x0000000000000360        0x0
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x0000000000000360        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+                0x0000000000000360                __etext = .
+
+.rel.dyn        0x0000000000000360        0x0
+ .rel.iplt      0x0000000000000360        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.data           0x0000000020000000       0x6c load address 0x0000000000000360
+                0x0000000000000360                __data_load__ = LOADADDR (.data)
+                0x0000000020000000                __data_start__ = .
+ *(.data)
+ .data          0x0000000020000000        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+ .data          0x0000000020000000        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000020000000                __dso_handle
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .data          0x0000000020000004        0x0 ./main.o
+ .data          0x0000000020000004        0x0 ./system_msp432p401r.o
+ .data          0x0000000020000004        0x0 ./gcc/startup_msp432p401r_gcc.o
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .data          0x0000000020000004        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+ *(.data*)
+ .data.SystemCoreClock
+                0x0000000020000004        0x4 ./system_msp432p401r.o
+                0x0000000020000004                SystemCoreClock
+ .data._impure_ptr
+                0x0000000020000008        0x4 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000020000008                _impure_ptr
+ .data.impure_data
+                0x000000002000000c       0x60 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                0x000000002000006c                . = ALIGN (0x4)
+                0x000000002000006c                __data_end__ = .
+
+.igot.plt       0x000000002000006c        0x0 load address 0x00000000000003cc
+ .igot.plt      0x000000002000006c        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.bss            0x000000002000006c       0x1c
+                0x000000002000006c                __bss_start__ = .
+ *(.shbss)
+ *(.bss)
+ .bss           0x000000002000006c        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+ .bss           0x000000002000006c       0x1c /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .bss           0x0000000020000088        0x0 ./main.o
+ .bss           0x0000000020000088        0x0 ./system_msp432p401r.o
+ .bss           0x0000000020000088        0x0 ./gcc/startup_msp432p401r_gcc.o
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .bss           0x0000000020000088        0x0 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+ *(.bss.*)
+ *(COMMON)
+                0x0000000020000088                . = ALIGN (0x4)
+                0x0000000020000088                __bss_end__ = .
+
+.heap           0x0000000020000088        0x0
+                0x0000000020000088                __heap_start__ = .
+                0x0000000020000088                end = __heap_start__
+                0x0000000020000088                _end = end
+                0x0000000020000088                __end = end
+ *(.heap)
+                0x0000000020000088                __heap_end__ = .
+                0x0000000020000088                __HeapLimit = __heap_end__
+
+.stack          0x0000000020000088        0x0
+                0x0000000020000088                _stack = .
+ *(.stack)
+                0x0000000020010000                __StackTop = (ORIGIN (REGION_STACK) + LENGTH (REGION_STACK))
+                0x0000000020010000                PROVIDE (__stack = __StackTop)
+LOAD /Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/display/lib/display.am4fg
+LOAD /Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/grlib/lib/gcc/m4f/grlib.a
+LOAD /Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source/third_party/spiffs/lib/gcc/m4f/spiffs.a
+LOAD /Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/lib/drivers_msp432p401x.am4fg
+LOAD /Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source/third_party/fatfs/lib/gcc/m4f/fatfs.a
+LOAD /Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/gcc/msp432p4xx_driverlib.a
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a
+START GROUP
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
+END GROUP
+START GROUP
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
+END GROUP
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
+LOAD /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+OUTPUT(blink.out elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x30
+ .ARM.attributes
+                0x0000000000000000       0x1e /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+ .ARM.attributes
+                0x000000000000001e       0x34 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .ARM.attributes
+                0x0000000000000052       0x1c /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.attributes
+                0x000000000000006e       0x34 ./main.o
+ .ARM.attributes
+                0x00000000000000a2       0x34 ./system_msp432p401r.o
+ .ARM.attributes
+                0x00000000000000d6       0x34 ./gcc/startup_msp432p401r_gcc.o
+ .ARM.attributes
+                0x000000000000010a       0x34 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000000000000013e       0x32 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000170       0x34 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000000001a4       0x34 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000000001d8       0x34 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x000000000000020c       0x32 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .ARM.attributes
+                0x000000000000023e       0x1e /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+
+.comment        0x0000000000000000       0x79
+ .comment       0x0000000000000000       0x79 ./main.o
+                                         0x7a (size before relaxing)
+ .comment       0x0000000000000079       0x7a ./system_msp432p401r.o
+ .comment       0x0000000000000079       0x7a ./gcc/startup_msp432p401r_gcc.o
+
+.debug_info     0x0000000000000000     0x122e
+ .debug_info    0x0000000000000000      0x2e5 ./main.o
+ .debug_info    0x00000000000002e5      0xdfb ./system_msp432p401r.o
+ .debug_info    0x00000000000010e0      0x14e ./gcc/startup_msp432p401r_gcc.o
+
+.debug_abbrev   0x0000000000000000      0x2e1
+ .debug_abbrev  0x0000000000000000       0xe9 ./main.o
+ .debug_abbrev  0x00000000000000e9      0x12f ./system_msp432p401r.o
+ .debug_abbrev  0x0000000000000218       0xc9 ./gcc/startup_msp432p401r_gcc.o
+
+.debug_aranges  0x0000000000000000       0x70
+ .debug_aranges
+                0x0000000000000000       0x20 ./main.o
+ .debug_aranges
+                0x0000000000000020       0x28 ./system_msp432p401r.o
+ .debug_aranges
+                0x0000000000000048       0x28 ./gcc/startup_msp432p401r_gcc.o
+
+.debug_ranges   0x0000000000000000       0x40
+ .debug_ranges  0x0000000000000000       0x10 ./main.o
+ .debug_ranges  0x0000000000000010       0x18 ./system_msp432p401r.o
+ .debug_ranges  0x0000000000000028       0x18 ./gcc/startup_msp432p401r_gcc.o
+
+.debug_line     0x0000000000000000      0x79e
+ .debug_line    0x0000000000000000      0x22c ./main.o
+ .debug_line    0x000000000000022c      0x3fa ./system_msp432p401r.o
+ .debug_line    0x0000000000000626      0x178 ./gcc/startup_msp432p401r_gcc.o
+
+.debug_str      0x0000000000000000      0xb7c
+ .debug_str     0x0000000000000000      0x2a5 ./main.o
+                                        0x2fb (size before relaxing)
+ .debug_str     0x00000000000002a5      0x839 ./system_msp432p401r.o
+                                        0xb10 (size before relaxing)
+ .debug_str     0x0000000000000ade       0x9e ./gcc/startup_msp432p401r_gcc.o
+                                        0x281 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x164
+ .debug_frame   0x0000000000000000       0x2c ./main.o
+ .debug_frame   0x000000000000002c       0x58 ./system_msp432p401r.o
+ .debug_frame   0x0000000000000084       0x4c ./gcc/startup_msp432p401r_gcc.o
+ .debug_frame   0x00000000000000d0       0x28 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000000000000f8       0x2c /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000000124       0x20 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000144       0x20 /Applications/ti/ccs930/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
