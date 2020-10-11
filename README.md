@@ -23,5 +23,6 @@ After installation:
 - start TI CSS and create a new workspace
 - Update CCS by selecting *ARM Compiler Tools* and *ARM GCC Compiler Tools* (You can click on the icon in the bottom right corner). 
 
-
-
+### Software Examples
+[The SimpleLink MSP432 SDK](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=ADoDWIZc5WTuUbxxkAgevQ__z-lQYNj__LATEST) 
+delivers components that enable engineers to develop applications on Texas Instruments MSP432 microcontroller devices.
