@@ -11,8 +11,8 @@ Download TI CCS using the following link:
 
 Follow the stap-by-step installation tutorial from TI: 
 - [Installation](https://software-dl.ti.com/ccs/esd/documents/users_guide_10.1.0/ccs_installation.html). Shortly: 
--- Choose an installation location,
--- then in the next step select custom installation and tick 'SimpleLink MSP432 low power + performance MCUs'.
+  - Choose an installation location,
+  - then in the next step select custom installation and tick 'SimpleLink MSP432 low power + performance MCUs'.
 
 
 
