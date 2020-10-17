@@ -4,7 +4,7 @@ This is the repository for the hands-on work during our lectures.
 
 *** 
 
-## Installing TI CSS and ARM compiler for [MSP432P401R](https://www.ti.com/product/MSP432P401R)
+## 1 - Installing TI CSS and ARM compiler for [MSP432P401R](https://www.ti.com/product/MSP432P401R)
 
 We will use [Code Composer Studio (CCS) Integrated Development Environment (IDE)](https://www.ti.com/tool/CCSTUDIO) from Texas Instruments. 
 
@@ -33,7 +33,7 @@ delivers components that enable engineers to develop applications on Texas Instr
 
 * * *
 
-## MSP432 Technical Reference Material
+## 2 - MSP432 Technical Reference Material
 The latest versions of the following documents can be accesed from the TI's website.
 - [MSP432P401R LaunchPad Development Kit](slau597f.pdf)
 - [MSP432P401R Datasheet](msp432p401r.pdf)
