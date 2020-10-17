@@ -8,7 +8,7 @@ void main(void)
 {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
 
-	 P1->DIR = ~BIT1;   // Set P1.1 output
+	 P1->DIR = ~BIT1;   // Set P1.1 input
 	 P1->OUT = BIT1;    // Set pull-up mode
 	 P1->REN = BIT1;    // Enable pull-up resistor
 	 P1->SEL0 = 0;      // Select GPIO
