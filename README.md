@@ -27,13 +27,13 @@ After installation:
 
 * * *
 
-### Software Examples
+## 2 - Software Examples
 [The SimpleLink MSP432 SDK](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=ADoDWIZc5WTuUbxxkAgevQ__z-lQYNj__LATEST) 
 delivers components that enable engineers to develop applications on Texas Instruments MSP432 microcontroller devices.
 
 * * *
 
-## 2 - MSP432 Technical Reference Material
+## 3 - MSP432 Technical Reference Material
 The latest versions of the following documents can be accesed from the TI's website.
 - [MSP432P401R LaunchPad Development Kit](slau597f.pdf)
 - [MSP432P401R Datasheet](msp432p401r.pdf)
@@ -41,5 +41,7 @@ The latest versions of the following documents can be accesed from the TI's webs
 
 Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti.com/msp430-workshop-series). You can check:
 - [Course Workbook:	MSP_Design_Workshop.pdf](http://software-dl.ti.com/trainingTTO/trainingTTO_public_sw/MSP_Design_Workshop/MSP_Design_Workshop.pdf)
+
+* * *
 
 
