@@ -28,9 +28,11 @@ int main(void)
 /* Port1 ISR */
 void PORT1_IRQHandler(void)
 {
-    // Toggling the output on the LED
-    if(P1->IFG & BIT1)
+    // Check if P1.1 interrupt triggered
+    if(P1->IFG & BIT1){
+        // Toggle the output on the LED
         P1->OUT ^= BIT0;
+    }
 
     // clear the flag
     P1->IFG &= ~BIT1;
