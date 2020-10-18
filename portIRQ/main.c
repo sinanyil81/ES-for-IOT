@@ -6,7 +6,7 @@ int main(void)
 
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;
 
-    P1->DIR = ~BIT1;   // Set P1.1 output
+    P1->DIR = ~BIT1;   // Set P1.1 input
     P1->OUT = BIT1;    // Set pull-up mode
     P1->REN = BIT1;    // Enable pull-up resistor
     P1->SEL0 = 0;      // Select GPIO
@@ -28,8 +28,6 @@ int main(void)
 /* Port1 ISR */
 void PORT1_IRQHandler(void)
 {
-    volatile uint32_t i;
-
     // Toggling the output on the LED
     if(P1->IFG & BIT1)
         P1->OUT ^= BIT0;
