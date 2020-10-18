@@ -6,23 +6,12 @@ int main(void)
 
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;
 
-    // GPIO Port Configuration for lowest power configuration
-    P1->OUT = 0x00; P1->DIR = 0xFF;
-    P2->OUT = 0x00; P2->DIR = 0xFF;
-    P3->OUT = 0x00; P3->DIR = 0xFF;
-    P4->OUT = 0x00; P4->DIR = 0xFF;
-    P5->OUT = 0x00; P5->DIR = 0xFF;
-    P6->OUT = 0x00; P6->DIR = 0xFF;
-    P7->OUT = 0x00; P7->DIR = 0xFF;
-    P8->OUT = 0x00; P8->DIR = 0xFF;
-    P9->OUT = 0x00; P9->DIR = 0xFF;
-    P10->OUT = 0x00; P10->DIR = 0xFF;
-    PJ->OUT = 0x00; PJ->DIR = 0xFF;
-
+    P1->DIR = ~BIT1;   // Set P1.1 input
     P1->OUT = BIT1;    // Set pull-up mode
     P1->REN = BIT1;    // Enable pull-up resistor
     P1->SEL0 = 0;      // Select GPIO
     P1->SEL1 = 0;      // Select GPIO
+
 
     P1->DIR |= BIT0;    // P1.0 set as input
 
