@@ -39,4 +39,7 @@ The latest versions of the following documents can be accesed from the TI's webs
 - [MSP432P401R Datasheet](msp432p401r.pdf)
 - [MSP432P4xx Technical Reference Manual](slau356i.pdf)
 
+Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti.com/msp430-workshop-series). You can check:
+- [Course Workbook:	MSP_Design_Workshop.pdf](http://software-dl.ti.com/trainingTTO/trainingTTO_public_sw/MSP_Design_Workshop/MSP_Design_Workshop.pdf)
+
 
