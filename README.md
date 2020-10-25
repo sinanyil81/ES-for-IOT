@@ -44,4 +44,6 @@ Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti
 
 * * *
 
-
+## 4 - Texas Instruments MSP432 Driver Library
+- [DriverLib's User Guide](slau600.pdf)
+- [DriverLib Examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=AIaHSvjn.KjUNRDtdnUpsg__z-lQYNj__LATEST)
