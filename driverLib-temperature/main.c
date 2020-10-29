@@ -63,9 +63,7 @@ int main(void)
     }
 }
 
-/* This interrupt happens every time a conversion has completed. Since the FPU
- * is enabled in stacking mode, we are able to use the FPU safely to perform
- * efficient floating point arithmetic.*/
+/* This interrupt happens every time a conversion has completed. */
 void ADC14_IRQHandler(void)
 {
     uint64_t status;
