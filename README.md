@@ -47,3 +47,9 @@ Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti
 ## 4 - Texas Instruments MSP432 Driver Library
 - [DriverLib's User Guide](MSP432_DriverLib_Users_Guide-MSP432P4xx-4_40_00_03.pdf)
 - [DriverLib Examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=AIaHSvjn.KjUNRDtdnUpsg__z-lQYNj__LATEST)
+
+* * *
+
+## 5 - BOOSTXL-EDUMKII Educational BoosterPack
+
+- [BOOSTXL-EDUMKII BoosterPack Documentation](slau599a.pdf)
