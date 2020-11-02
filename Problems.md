@@ -7,5 +7,5 @@
 - Select your device (MSP432...)
 - Select *Settings & Utilities*
 - Scroll down *Device Security Configuration*
-- **Unlock Device**
+- **Unlock Device**.  
 After these steps, you should be able to programming your launchpad again.
