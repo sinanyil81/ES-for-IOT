@@ -54,3 +54,6 @@ Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti
 
 - [BOOSTXL-EDUMKII BoosterPack Documentation](slau599a.pdf)
 - [Code examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=APxIJQJwn4jim9wefowLvw__z-lQYNj__LATEST&search=BOOSTXL)
+
+## 6 - Troubleshooting
+- See [this](Problems.md)
