@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="9.3.0"/>
+	<deviceVariant value="MSP432P401R"/>
+	<deviceFamily value="MSP432"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="18.12.5.LTS"/>
+	<isElfFormat value="true"/>
+	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
+	<rts value=""/>
+	<createSlaveProjects value=""/>
+	<ignoreDefaultDeviceSettings value="true"/>
+	<ignoreDefaultCCSSettings value="true"/>
+	<templateProperties value="id=boostxl_edumkii_temperature_msp432p401r_MSP_EXP432P401R_nortos_ccs.projectspec.boostxl_edumkii_temperature_msp432p401r_MSP_EXP432P401R_nortos_ccs,buildProfile=release,isHybrid=true"/>
+	<origin value="/Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_edumkii_temperature_msp432p401r/ccs/boostxl_edumkii_temperature_msp432p401r_MSP_EXP432P401R_nortos_ccs.projectspec"/>
+	<filesToOpen value=""/>
+</projectOptions>
