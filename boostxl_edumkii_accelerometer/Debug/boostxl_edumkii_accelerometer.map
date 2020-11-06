@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker Unix v18.12.5                  
 ******************************************************************************
->> Linked Mon Nov  2 13:03:20 2020
+>> Linked Mon Nov  2 17:21:18 2020
 
 OUTPUT FILE NAME:   <boostxl_edumkii_accelerometer.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000039f1
