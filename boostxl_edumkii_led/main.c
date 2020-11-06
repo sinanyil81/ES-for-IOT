@@ -45,8 +45,6 @@
 #include <ti/devices/msp432p4xx/inc/msp.h>
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
 #include <ti/grlib/grlib.h>
-#include "HAL_I2C.h"
-#include "HAL_OPT3001.h"
 #include "LcdDriver/Crystalfontz128x128_ST7735.h"
 #include "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
@@ -54,39 +52,58 @@
 /* Graphic library context */
 Graphics_Context g_sContext;
 
-/* Variable for storing lux value returned from OPT3001 */
-float lux;
-
 /* Timer_A Compare Configuration Parameter  (PWM) */
 Timer_A_CompareModeConfig compareConfig_PWM = {
 TIMER_A_CAPTURECOMPARE_REGISTER_3,          // Use CCR3
         TIMER_A_CAPTURECOMPARE_INTERRUPT_DISABLE,   // Disable CCR interrupt
         TIMER_A_OUTPUTMODE_TOGGLE_SET,              // Toggle output but
-        10                                         // 50% Duty Cycle
+        5000                                        // 50% Duty Cycle
         };
 
 /* Timer_A Up Configuration Parameter */
 const Timer_A_UpModeConfig upConfig = {
-TIMER_A_CLOCKSOURCE_SMCLK,           //
-        TIMER_A_CLOCKSOURCE_DIVIDER_1, // SMCLK/1 = 3 MhZ
-        3000,                                    // 3000 tick period
+TIMER_A_CLOCKSOURCE_SMCLK,                      // SMCLK = 3 MhZ
+        TIMER_A_CLOCKSOURCE_DIVIDER_12,         // SMCLK/12 = 250 KhZ
+        10000,                                  // 40 ms tick period
         TIMER_A_TAIE_INTERRUPT_DISABLE,         // Disable Timer interrupt
         TIMER_A_CCIE_CCR0_INTERRUPT_DISABLE,    // Disable CCR0 interrupt
         TIMER_A_DO_CLEAR                        // Clear value
         };
 
-void _buzzerInit()
+void _ledInit()
 {
-    /* Configures P2.7 to PM_TA0.3 for using Timer PWM to control Buzzer */
+    /* Configures P2.4 to PM_TA0.1 for using Timer PWM to control LED */
+    GPIO_setAsPeripheralModuleFunctionOutputPin(GPIO_PORT_P2, GPIO_PIN4,
+    GPIO_PRIMARY_MODULE_FUNCTION);
+
+    /* Configures P2.6 to PM_TA0.3 for using Timer PWM to control LED */
     GPIO_setAsPeripheralModuleFunctionOutputPin(GPIO_PORT_P2, GPIO_PIN6,
+    GPIO_PRIMARY_MODULE_FUNCTION);
+
+    /* Configures P5.6 to PM_TA0.4 for using Timer PWM to control LED */
+    GPIO_setAsPeripheralModuleFunctionOutputPin(GPIO_PORT_P5, GPIO_PIN6,
     GPIO_PRIMARY_MODULE_FUNCTION);
 
     /* Configuring Timer_A0 for Up Mode and starting */
     Timer_A_configureUpMode(TIMER_A0_BASE, &upConfig);
     Timer_A_startCounter(TIMER_A0_BASE, TIMER_A_UP_MODE);
 
+    /* Configuring Timer_A2 for Up Mode and starting */
+    Timer_A_configureUpMode(TIMER_A2_BASE, &upConfig);
+    Timer_A_startCounter(TIMER_A2_BASE, TIMER_A_UP_MODE);
+
     /* Initialize compare registers to generate PWM */
+    Timer_A_initCompare(TIMER_A0_BASE, &compareConfig_PWM); // For P2.6
+
+    // For Port 2.4
+    compareConfig_PWM.compareRegister = TIMER_A_CAPTURECOMPARE_REGISTER_1;
+    compareConfig_PWM.compareValue = 5000;
     Timer_A_initCompare(TIMER_A0_BASE, &compareConfig_PWM);
+
+    // For Port 5.6
+    compareConfig_PWM.compareRegister = TIMER_A_CAPTURECOMPARE_REGISTER_1;
+    compareConfig_PWM.compareValue = 5000;
+    Timer_A_initCompare(TIMER_A2_BASE, &compareConfig_PWM);
 }
 
 void _graphicsInit()
@@ -104,7 +121,6 @@ void _graphicsInit()
     Graphics_setBackgroundColor(&g_sContext, GRAPHICS_COLOR_WHITE);
     GrContextFontSet(&g_sContext, &g_sFontFixed6x8);
     Graphics_clearDisplay(&g_sContext);
-
 }
 
 void _hwInit()
@@ -128,7 +144,7 @@ void _hwInit()
     CS_initClockSignal(CS_ACLK, CS_REFOCLK_SELECT, CS_CLOCK_DIVIDER_1);
 
     _graphicsInit();
-    _buzzerInit();
+    _ledInit();
 }
 
 /*
@@ -137,9 +153,10 @@ void _hwInit()
 int main(void)
 {
 
+    /* P2.6 and P2.4 and 5.6 are LEDs */
     _hwInit();
 
-    Graphics_drawStringCentered(&g_sContext, (int8_t *) "Buzzer Demo",
+    Graphics_drawStringCentered(&g_sContext, (int8_t *) "LED Demo",
     AUTO_STRING_LENGTH,
                                 64, 30,
                                 OPAQUE_TEXT);

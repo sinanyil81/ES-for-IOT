@@ -8,8 +8,6 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./HAL_I2C.obj" \
-"./HAL_OPT3001.obj" \
 "./main.obj" \
 "./system_msp432p401r.obj" \
 "./LcdDriver/Crystalfontz128x128_ST7735.obj" \
@@ -17,7 +15,7 @@ ORDERED_OBJS += \
 "./ccs/startup_msp432p401r_ccs.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
--l"/Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/grlib/lib/ccs/m4f/grlib.a" \
+-l"/Applications/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/grlib/lib/ccs/m4f/grlib.a" \
 -l"ti/display/lib/display.aem4f" \
 -l"ti/grlib/lib/ccs/m4f/grlib.a" \
 -l"third_party/spiffs/lib/ccs/m4f/spiffs.a" \
@@ -135,42 +133,42 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-boostxl_edumkii_buzzer.out \
+boostxl_edumkii_led.out \
 
 EXE_OUTPUTS__QUOTED += \
-"boostxl_edumkii_buzzer.out" \
+"boostxl_edumkii_led.out" \
 
 BIN_OUTPUTS += \
-boostxl_edumkii_buzzer.hex \
+boostxl_edumkii_led.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"boostxl_edumkii_buzzer.hex" \
+"boostxl_edumkii_led.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "boostxl_edumkii_buzzer.out"
+	@$(MAKE) --no-print-directory -Onone "boostxl_edumkii_led.out"
 
 # Tool invocations
-boostxl_edumkii_buzzer.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+boostxl_edumkii_led.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"/Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none --define=__MSP432P401R__ --define=DeviceFamily_MSP432P401x -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"boostxl_edumkii_buzzer.map" --stack_size=512 -i"/Users/sinan/ti/simplelink_msp432p4_sdk_3_40_01_02/source" -i"/Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="boostxl_edumkii_buzzer_linkInfo.xml" --rom_model -o "boostxl_edumkii_buzzer.out" $(ORDERED_OBJS)
+	"/Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none --define=__MSP432P401R__ --define=DeviceFamily_MSP432P401x -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"boostxl_edumkii_led.map" --stack_size=512 -i"/Applications/ti/simplelink_msp432p4_sdk_3_40_01_02/source" -i"/Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="boostxl_edumkii_led_linkInfo.xml" --rom_model -o "boostxl_edumkii_led.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-boostxl_edumkii_buzzer.hex: $(EXE_OUTPUTS)
+boostxl_edumkii_led.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"/Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armhex"  -o "boostxl_edumkii_buzzer.hex" $(EXE_OUTPUTS__QUOTED)
+	"/Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armhex"  -o "boostxl_edumkii_led.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "HAL_I2C.obj" "HAL_OPT3001.obj" "main.obj" "system_msp432p401r.obj" "LcdDriver/Crystalfontz128x128_ST7735.obj" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj" "ccs/startup_msp432p401r_ccs.obj" 
-	-$(RM) "HAL_I2C.d" "HAL_OPT3001.d" "main.d" "system_msp432p401r.d" "LcdDriver/Crystalfontz128x128_ST7735.d" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.d" "ccs/startup_msp432p401r_ccs.d" 
+	-$(RM) "main.obj" "system_msp432p401r.obj" "LcdDriver/Crystalfontz128x128_ST7735.obj" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj" "ccs/startup_msp432p401r_ccs.obj" 
+	-$(RM) "main.d" "system_msp432p401r.d" "LcdDriver/Crystalfontz128x128_ST7735.d" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.d" "ccs/startup_msp432p401r_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker Unix v18.12.5                  
 ******************************************************************************
->> Linked Fri Nov  6 10:17:07 2020
+>> Linked Fri Nov  6 11:35:25 2020
 
 OUTPUT FILE NAME:   <boostxl_edumkii_buzzer.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000019c5
