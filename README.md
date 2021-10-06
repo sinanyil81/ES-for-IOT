@@ -26,6 +26,13 @@ After installation:
 - Update CCS by selecting *ARM Compiler Tools* and *ARM GCC Compiler Tools* (You can click on the icon in the bottom right corner). 
 
 * * *
+## Energia IDE
+
+[Energia](https://energia.nu/) brings the Wiring and Arduino framework to the Texas Instruments MSP432 LaunchPad. Alternatively, you can develop your project by using this IDE and use Ardnuino-like programming. Energia is problematic on new 64-bit MACOS platforms, therefore you might need to use a Linux/Windows virtual machine to run it on MACOS. 
+
+There are a lot of examples on Internet, sample programs and applications. We are not going to cover programming Launchpad using Energia. But you can develop your projects with it. 
+
+* * *
 
 ## 2 - Software Examples
 [The SimpleLink MSP432 SDK](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=ADoDWIZc5WTuUbxxkAgevQ__z-lQYNj__LATEST) 
