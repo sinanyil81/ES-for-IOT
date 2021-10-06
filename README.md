@@ -13,7 +13,7 @@ Download TI CCS using the following link (choose the link for your operating sys
 - [Download TI CSS](https://www.ti.com/tool/download/CCSTUDIO)
 
 ### Installation
-Follow the stap-by-step installation tutorial from TI: 
+Follow the step-by-step installation tutorial from TI: 
 - [Installation](https://software-dl.ti.com/ccs/esd/documents/users_guide_10.1.0/ccs_installation.html).
 
 Shortly: 
@@ -23,7 +23,7 @@ Shortly:
 ### Update 
 After installation:
 - start TI CSS and create a new workspace
-- Update CCS by selecting *ARM Compiler Tools* and *ARM GCC Compiler Tools* (You can click on the icon in the bottom right corner). 
+- update CCS by selecting *ARM Compiler Tools* and *ARM GCC Compiler Tools* (You can click on the icon in the bottom right corner). 
 
 * * *
 ## Energia IDE
@@ -31,6 +31,11 @@ After installation:
 [Energia](https://energia.nu/) brings the Wiring and Arduino framework to the Texas Instruments MSP432 LaunchPad. Alternatively, you can develop your project by using this IDE and use Ardnuino-like programming. Energia is problematic on new 64-bit MACOS platforms, therefore you might need to use a Linux/Windows virtual machine to run it on MACOS. 
 
 There are a lot of examples on Internet, sample programs and applications. We are not going to cover programming Launchpad using Energia. But you can develop your projects with it. 
+Also, you can find already downloaded Energia IDE in the Downloads directory of the Ubuntu VM. Follow the parent directory and launch the IDE:
+	
+	cd Downloads/energia-1.8.10E23-linux64/energia-1.8.10E23
+	
+	sudo ./energia
 
 * * *
 
