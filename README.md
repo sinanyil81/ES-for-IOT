@@ -112,9 +112,11 @@ MSP432 Driver Library is also released as a component of MSP432Ware. You can imp
 An empty "skeleton" project is provided in the examples directory of the MSPWare release.
 In this project All of the include paths and compiler options are set up to allow the user to seamlessly start development on their MSP432 DriverLib application.
 
+*** 
+
 ## Native installation
 
-### 1 - Installing TI CSS and ARM compiler for [MSP432P401R](https://www.ti.com/product/MSP432P401R)
+### Installing TI CSS and ARM compiler for [MSP432P401R](https://www.ti.com/product/MSP432P401R)
 
 We will use [Code Composer Studio (CCS) Integrated Development Environment (IDE)](https://www.ti.com/tool/CCSTUDIO) from Texas Instruments. 
 
@@ -144,13 +146,13 @@ There are a lot of examples on Internet, sample programs and applications. We ar
 
 * * *
 
-### 2 - Software Examples
+### Software Examples
 [The SimpleLink MSP432 SDK](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=ADoDWIZc5WTuUbxxkAgevQ__z-lQYNj__LATEST) 
 delivers components that enable engineers to develop applications on Texas Instruments MSP432 microcontroller devices.
 
 * * *
 
-### 3 - MSP432 Technical Reference Material
+### MSP432 Technical Reference Material
 The latest versions of the following documents can be accesed from the TI's website.
 - [MSP432P401R LaunchPad Development Kit](slau597f.pdf)
 - [MSP432P401R Datasheet](msp432p401r.pdf)
@@ -161,18 +163,18 @@ Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti
 
 * * *
 
-### 4 - Texas Instruments MSP432 Driver Library
+### Texas Instruments MSP432 Driver Library
 - [DriverLib's User Guide](MSP432_DriverLib_Users_Guide-MSP432P4xx-4_40_00_03.pdf)
 - [DriverLib Examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=AIaHSvjn.KjUNRDtdnUpsg__z-lQYNj__LATEST)
 
 * * *
 
-### 5 - BOOSTXL-EDUMKII Educational BoosterPack
+### BOOSTXL-EDUMKII Educational BoosterPack
 
 - [BOOSTXL-EDUMKII BoosterPack Documentation](slau599a.pdf)
 - [Code examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=APxIJQJwn4jim9wefowLvw__z-lQYNj__LATEST&search=BOOSTXL)
 
-### 6 - Troubleshooting
+### Troubleshooting
 - See [this](Problems.md)
 
 ## Connecting your LaunchPad
