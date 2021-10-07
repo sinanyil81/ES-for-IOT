@@ -93,7 +93,7 @@ The VM should automatically adjust its window size thereafter.
 
 ### Code Composer Studio
 
-To start the integrated development environment (IDE) for the course, [Code Composer Studio](#code-composer-studio-ccs), simply either double-click on the corresponding desktop icon or left-click on the icon in the task bar. 
+To start the integrated development environment (IDE) for the course, Code Composer Studio, simply either double-click on the corresponding desktop icon or left-click on the icon in the task bar. 
 
 ### Energia IDE
 
