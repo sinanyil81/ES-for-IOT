@@ -4,6 +4,7 @@ This is the repository for the hands-on work during our lectures.
 
 There are two options to run the necessary tools for the course:
 - [Virtual machine installation](#virtual-machine-installation) (**recommended**) uses a virtual machine that has already been set-up by us. We recommend this option if you are less experienced with setting up your own tool chains. For this, you will have to install a virtual machine manager called *VirtualBox* and can then directly run the required software (*Code Composer Studio*) inside the virtual machine.
+(credit to [Andreas Biri](https://gitlab.ethz.ch/abiri))
 - [Native installation](#native-installation) (**without support**) uses your normal operating system and directly installs the necessary libraries and tools through an installer script. 
 Please notice that this might change the configurations of your machine. We do not officially support such installations; if you run into problems, please try using a [VM](#virtual-machine-installation) before asking us for help.
 
@@ -110,7 +111,7 @@ There, you can check the examples, uploading them to the target LaunchPad, which
 Ubuntu VM contains standalone installed MSP432Ware (/home/student/ti/msp/MSP432Ware_3_50_00_02) (a collection of code examples, datasheets and other design resources for all MSP432 devices delivered in a convenient package). 
 MSP432 Driver Library is also released as a component of MSP432Ware. You can import and run examples from driver library when you have MSP432Ware installed.
 An empty "skeleton" project is provided in the examples directory of the MSPWare release.
-In this project All of the include paths and compiler options are set up to allow the user to seamlessly start development on their MSP432 DriverLib application.
+In this project, all of the include paths and compiler options are set up to allow the user to seamlessly start development on their MSP432 DriverLib application.
 
 *** 
 
@@ -166,6 +167,13 @@ Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti
 ### Texas Instruments MSP432 Driver Library
 - [DriverLib's User Guide](MSP432_DriverLib_Users_Guide-MSP432P4xx-4_40_00_03.pdf)
 - [DriverLib Examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=AIaHSvjn.KjUNRDtdnUpsg__z-lQYNj__LATEST)
+
+The esiest way to start working with Driver Library is to install MSP432Ware (a collection of code examples, datasheets and other design resources for all MSP432 devices delivered in a convenient package). 
+MSP432 Driver Library is also released as a component of MSP432Ware. You can import and run examples from driver library when you have MSP432Ware installed.
+An empty "skeleton" project is provided in the examples directory of the MSPWare release.
+In this project, all of the include paths and compiler options are set up to allow the user to seamlessly start development on their MSP432 DriverLib application.
+
+- [MSP432Ware](https://www.ti.com/tool/MSP432WARE) (you may need to register in order to download the file)
 
 * * *
 
