@@ -82,14 +82,35 @@ More information on connecting USB devices to VMs can be found in the [official 
 
 #### Ubuntu VM
 
-Now, you are ready to start your VM by double-clicking on it in the VirtualBox Manager. The provided virtual machine is built on Linux [Ubuntu 20.04.1 LTS](https://releases.ubuntu.com/20.04.1/). As with any physical machine, you will see the normal desktop screen after booting up.
+Now, you are ready to start your VM by double-clicking on it in the VirtualBox Manager. The provided virtual machine is built on Linux [Ubuntu 20.04.1 LTS](https://releases.ubuntu.com/20.04.1/). 
+As with any physical machine, you will see the normal desktop screen after booting up.
+
 You should be logged in automatically. However, in case you are required to authenticate yourself (e.g. to run the `sudo` command), we prepared a user `student` with password `student`.
 
-The VM should automatically scale its resolution to fit your window size; if not, make sure that `View` &rarr; `Auto-resize Guest Display` is ticked in your VM menu bar. To manually change your screen resolution, open your VM and inside the guest OS go to `Settings` &rarr; `Displays` &rarr; `Resolution`. The VM should automatically adjust its window size thereafter.
+The VM should automatically scale its resolution to fit your window size; if not, make sure that `View` &rarr; `Auto-resize Guest Display` is ticked in your VM menu bar. 
+To manually change your screen resolution, open your VM and inside the guest OS go to `Settings` &rarr; `Displays` &rarr; `Resolution`.
+The VM should automatically adjust its window size thereafter.
 
-The default keyboard layout for the VM is "German (Switzerland)". If you would like to change this, follow the [official guide for alternative keyboard layouts](https://help.ubuntu.com/stable/ubuntu-help/keyboard-layouts.html.en): inside the guest OS go to `Settings` &rarr; `Regions & Languages` &rarr; `Input Sources` and use the `+` button to add the language that is associated with the desired layout.
+### Code Composer Studio
 
-To start the integrated development environment (IDE) for the ES labs, [Code Composer Studio](#code-composer-studio-ccs), simply either double-click on the corresponding desktop icon or left-click on the icon in the task bar. You can find the labs already pre-downloaded in `~/Embedded_Systems` (use the `Files` program to browse through them).
+To start the integrated development environment (IDE) for the course, [Code Composer Studio](#code-composer-studio-ccs), simply either double-click on the corresponding desktop icon or left-click on the icon in the task bar. 
+
+### Energia IDE
+
+Also, you can find already downloaded Energia IDE in the Downloads directory of the Ubuntu VM. Follow the parent directory and launch the IDE:
+	
+	cd Downloads/energia-1.8.10E23-linux64/energia-1.8.10E23
+	
+	sudo ./energia
+	
+There, you can check the examples, uploading them to the target LaunchPad, which has been already configured. 
+
+### Texas Instruments MSP432 Driver Library
+
+Ubuntu VM contains standalone installed MSP432Ware (/home/student/ti/msp/MSP432Ware_3_50_00_02) (a collection of code examples, datasheets and other design resources for all MSP432 devices delivered in a convenient package). 
+MSP432 Driver Library is also released as a component of MSP432Ware. You can import and run examples from driver library when you have MSP432Ware installed.
+An empty "skeleton" project is provided in the examples directory of the MSPWare release.
+In this project All of the include paths and compiler options are set up to allow the user to seamlessly start development on their MSP432 DriverLib application.
 
 ## Native installation
 
@@ -120,13 +141,6 @@ After installation:
 [Energia](https://energia.nu/) brings the Wiring and Arduino framework to the Texas Instruments MSP432 LaunchPad. Alternatively, you can develop your project by using this IDE and use Ardnuino-like programming. Energia is problematic on new 64-bit MACOS platforms, therefore you might need to use a Linux/Windows virtual machine to run it on MACOS. 
 
 There are a lot of examples on Internet, sample programs and applications. We are not going to cover programming Launchpad using Energia. But you can develop your projects with it. 
-Also, you can find already downloaded Energia IDE in the Downloads directory of the Ubuntu VM. Follow the parent directory and launch the IDE:
-	
-	cd Downloads/energia-1.8.10E23-linux64/energia-1.8.10E23
-	
-	sudo ./energia
-	
-There, you can check the examples, uploading them to the target LaunchPad, which has been already configured. 
 
 * * *
 
@@ -151,9 +165,6 @@ Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti
 - [DriverLib's User Guide](MSP432_DriverLib_Users_Guide-MSP432P4xx-4_40_00_03.pdf)
 - [DriverLib Examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=AIaHSvjn.KjUNRDtdnUpsg__z-lQYNj__LATEST)
 
-Ubuntu VM contains standalone installed MSP432Ware (a collection of code examples, datasheets and other design resources for all MSP432 devices delivered in a convenient package). 
-MSP432 Driver Library is also released as a component of MSP432Ware. You can import and run examples from driver library when you have MSP432Ware installed.
-
 * * *
 
 ### 5 - BOOSTXL-EDUMKII Educational BoosterPack
@@ -163,3 +174,33 @@ MSP432 Driver Library is also released as a component of MSP432Ware. You can imp
 
 ### 6 - Troubleshooting
 - See [this](Problems.md)
+
+## Connecting your LaunchPad
+
+Your host OS should automatically detect the LaunchPad. Notice that on certain systems such as Windows, you might have to wait a few seconds until the necessary drivers have been installed in the background. To make it available to the virtual machine, do as follows:
+ 
+**Step 1:** Plug-in your LaunchPad to your host computer using the provided microUSB cable. Make sure that CCS is *not* running on the host system, as it might capture the LaunchPad before the VM can do so.
+
+**Step 2:** In the VirtualBox menu of the running virtual machine, click on `Devices` &rarr; `USB` &rarr; `Texas Instruments XDS110` to make the device available to your virtual machine (there should be a tick next to the option after you have selected it).
+
+In case you do not see `Texas Instruments XDS110` as an available option, make sure that you have followed our [guidance on USB devices on Linux](#linux-establishing-usb-connections) and that the device is visible on the host system. 
+On Windows, you can verify this by going to `Control Panel` &rarr; `Hardware and Sound` &rarr; `Devices and Printers` where you should see `XDS110 [...]` listed under "Unspecified".
+
+## Updating your LaunchPad
+
+Before your first launch, you must update the firmware of your LaunchPad. At the time of writing, the up-to-date version of the LaunchPad is `3.0.0.16`; if your board has an older version flashed onto it, CCS will automatically detect this and propose an upgrade. 
+If you run CCS on your native machine, the upgrade should successfully complete; on the VM, do as follows:
+
+**Step 1:** Make sure the device is made available to the VM (`Devices` &rarr; `USB` &rarr; `Texas Instruments XDS110` is selected in the VirtualBox menu). If you see `Texas Instruments Incorporated Tiva Device Firmware Update`, directly jump to *Step 3*.
+
+**Step 2:** Switch the device into DFU mode by entering into a terminal:
+
+    ~/ti/ccs1010/ccs/ccs_base/common/uscif/xds110/xdsdfu -m
+
+**Step 3:** You should now see a new device in your list in the VirtualBox menu: `Devices` &rarr; `USB` &rarr; `Texas Instruments Incorporated Tiva Device Firmware Update`. Make sure that it is selected and enter into the same terminal as before:
+
+    ~/ti/ccs1010/ccs/ccs_base/common/uscif/xds110/xdsdfu -f ~/ti/ccs1010/ccs/ccs_base/common/uscif/xds110/firmware_3.0.0.16.bin -r
+
+Make sure that you do not forget the `-r` at the end of the command. You can also reset the device separately by entering `~/ti/ccs1010/ccs/ccs_base/common/uscif/xds110/xdsdfu -r`.
+
+**Step 4:** Once again, connect the debug probe by clicking on `Devices` &rarr; `USB` &rarr; `Texas Instruments XDS110`. Notice that the name of the device should now have the new version appended (`Texas Instruments XDS110 (3.0.0.16)`).
