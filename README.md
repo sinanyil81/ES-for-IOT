@@ -168,7 +168,7 @@ Some nice tutorials can be found at [MSP430 Workshop Series](https://training.ti
 - [DriverLib's User Guide](MSP432_DriverLib_Users_Guide-MSP432P4xx-4_40_00_03.pdf)
 - [DriverLib Examples](http://dev.ti.com/tirex/explore/node?devtools=MSP-EXP432P401R&node=AIaHSvjn.KjUNRDtdnUpsg__z-lQYNj__LATEST)
 
-The esiest way to start working with Driver Library is to install MSP432Ware (a collection of code examples, datasheets and other design resources for all MSP432 devices delivered in a convenient package). 
+The easiest way to start working with Driver Library is to install MSP432Ware (a collection of code examples, datasheets and other design resources for all MSP432 devices delivered in a convenient package). 
 MSP432 Driver Library is also released as a component of MSP432Ware. You can import and run examples from driver library when you have MSP432Ware installed.
 An empty "skeleton" project is provided in the examples directory of the MSPWare release.
 In this project, all of the include paths and compiler options are set up to allow the user to seamlessly start development on their MSP432 DriverLib application.
