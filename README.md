@@ -14,7 +14,7 @@ Please notice that this might change the configurations of your machine. We do n
 
 A *virtual machine* (VM) emulates a complete computer system on top of your normal operating system. In such a case, you run a *guest* system (which we previously prepared for you) on top of your own *host* system (just as you run any other programs). For this course, we use Linux [Ubuntu 20.04.1 LTS](https://releases.ubuntu.com/20.04.1/) as a guest system.
 
-The VM is available [from this google drive](will be released soon) and requires 12 GB of free disk space as well as at least 2 GB of RAM.
+The VM is available [from this google drive](https://drive.google.com/file/d/1yhd603OZe1Acm16FK_hQkG8BkVd27scb/view?usp=sharing) and requires 12 GB of free disk space as well as at least 2 GB of RAM.
 
 To run the VM, we use [VirtualBox](https://www.virtualbox.org/). This program is a so-called *virtual machine manager* that provides the link between all common host systems (Windows, macOS, Linux) and the guest system (in our case Linux Ubuntu).
 
@@ -46,7 +46,7 @@ Simply download the file and double-click on it; VirtualBox should then automati
 
 ### Running your virtual machine
 
-After having downloaded the VM [from the google drive](will be released soon) as an `.ova` file, you can import the machine into VirtualBox by double-clicking on the downloaded `.ova` file and VirtualBox will ask to import the VM. 
+After having downloaded the VM [from the google drive](https://drive.google.com/file/d/1yhd603OZe1Acm16FK_hQkG8BkVd27scb/view?usp=sharing) as an `.ova` file, you can import the machine into VirtualBox by double-clicking on the downloaded `.ova` file and VirtualBox will ask to import the VM. 
 During the import, make sure that the box next to `Import hard drives as VDI` is ticked.
 
 Before you start the VM, consider adapting the VirtualBox VM settings in the VirtualBox Manager. We recommend the following configuration:
